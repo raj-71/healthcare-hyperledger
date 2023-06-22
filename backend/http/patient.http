@@ -1,0 +1,27 @@
+@baseUrl = 'http://localhost:4000'
+@authorizationToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzY0YzBlZmQzMzBlMjA0ZDM3Y2I5NiIsImlhdCI6MTY4MTMyOTg4OH0.hb7P1-PrK1eRaOKWOu9FOCDtYI8k2zxEjcHlGD-fDSo'
+@sessionToken = 's%3A9Sar9NjwGC5blWyZHe4xf-F59q97HUBB.J0YUox2Emp7P7qBlvNdi15JNihTJQQykY9kii%2FNh7zk'
+
+
+POST {{baseUrl}}/api/register-patient HTTP/1.1
+# Host: localhost:40009
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzY0YzBlZmQzMzBlMjA0ZDM3Y2I5NiIsImlhdCI6MTY4MTMyOTg4OH0.hb7P1-PrK1eRaOKWOu9FOCDtYI8k2zxEjcHlGD-fDSo
+# Cookie: connect.sid=s%3A9Sar9NjwGC5blWyZHe4xf-F59q97HUBB.J0YUox2Emp7P7qBlvNdi15JNihTJQQykY9kii%2FNh7zk
+Content-Length: 273
+
+{
+    "args": [
+        "patient105",
+        "12-03-1989",
+        "male",
+        "567812349888",
+        "9879879870",
+        "A+",
+        "Delhi"
+    ],
+    "username": "patient105",
+    "orgName": "patient",
+    "password": "pass1234",
+    "fcn": "registerPatient"
+}
