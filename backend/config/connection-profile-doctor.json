@@ -1,0 +1,67 @@
+{
+    "name": "fablo-test-network-doctor",
+    "description": "Connection profile for lab in Fablo network",
+    "version": "1.0.0",
+    "client": {
+        "organization": "doctor"
+    },
+    "organizations": {
+        "doctor": {
+            "mspid": "doctorMSP",
+            "peers": [
+                "peer0.patient.healthcare.com",
+                "peer0.doctor.healthcare.com",
+                "peer0.pharmacy.healthcare.com",
+                "peer0.lab.healthcare.com",
+                "peer0.insurance.healthcare.com"
+            ],
+            "certificateAuthorities": [
+                "ca.doctor.healthcare.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.patient.healthcare.com": {
+          "url": "grpc://localhost:7041",
+          "tlsCACerts": {
+            "pem": "-----BEGIN CERTIFICATE-----\nMIICcTCCAhegAwIBAgIQRmom6PrVsYf7UwEmRGKLtDAKBggqhkjOPQQDAjCBgjEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xHzAdBgNVBAoTFnBhdGllbnQuaGVhbHRoY2FyZS5jb20xJTAjBgNV\nBAMTHHRsc2NhLnBhdGllbnQuaGVhbHRoY2FyZS5jb20wHhcNMjMwNDIxMDYzMDAw\nWhcNMzMwNDE4MDYzMDAwWjCBgjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlm\nb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xHzAdBgNVBAoTFnBhdGllbnQu\naGVhbHRoY2FyZS5jb20xJTAjBgNVBAMTHHRsc2NhLnBhdGllbnQuaGVhbHRoY2Fy\nZS5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATNkP9SEHBF+GUUte4ev7gY\ndz1KuQqoPQ5aAwFrNScPlkzxXnMJpXoWnjf9B2xZUUdqZHBf029KiNoN/KpBb7vg\no20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF\nBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIHLqLMsnNNeZeeLpQbQ/Jmnv\n+sNNGoGFC6ICJiEVMR8qMAoGCCqGSM49BAMCA0gAMEUCIBTz+3QNtF0jmnjdmMMd\nEx+le9VXjunqtATs3+o554mLAiEA/DrECTKH0FvreftDxqMecD5dwBkKAMiF5f6O\nGUSsdrc=\n-----END CERTIFICATE-----\n"
+          }
+        },
+        "peer0.doctor.healthcare.com": {
+          "url": "grpc://localhost:7061",
+          "tlsCACerts": {
+            "pem": "-----BEGIN CERTIFICATE-----\nMIICbDCCAhOgAwIBAgIQTHXSSZWjrGQWAkLXfYah2DAKBggqhkjOPQQDAjCBgDEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xHjAcBgNVBAoTFWRvY3Rvci5oZWFsdGhjYXJlLmNvbTEkMCIGA1UE\nAxMbdGxzY2EuZG9jdG9yLmhlYWx0aGNhcmUuY29tMB4XDTIzMDQyMTA2MzAwMFoX\nDTMzMDQxODA2MzAwMFowgYAxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9y\nbmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMR4wHAYDVQQKExVkb2N0b3IuaGVh\nbHRoY2FyZS5jb20xJDAiBgNVBAMTG3Rsc2NhLmRvY3Rvci5oZWFsdGhjYXJlLmNv\nbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNuLhaTFJ8DZZRbDiK06haMiUvbg\noSQVVt72XBvcsVuyyFwT55vWLB0YlimRUF4rShCawfvKY4WDjSx0qMVDmR+jbTBr\nMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw\nDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgw4YPXgbacGXFUr1aa1MlKYvXDm4W\nuHJYTFbphZ7PtakwCgYIKoZIzj0EAwIDRwAwRAIgYMjtkpOAY9/ZMDFGV3X4UF+f\nBohYY7IQUlP2Qhe7ZlECIEzJD+gZY9Y3WmICkKeoL3nDWEOIHLmEaVdYUX1Qp9qo\n-----END CERTIFICATE-----\n"
+          }
+        },
+        "peer0.pharmacy.healthcare.com": {
+          "url": "grpc://localhost:7081",
+          "tlsCACerts": {
+            "pem": "-----BEGIN CERTIFICATE-----\nMIICdTCCAhugAwIBAgIQKFe5GapN+N7PL3TIjSRcsjAKBggqhkjOPQQDAjCBhDEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xIDAeBgNVBAoTF3BoYXJtYWN5LmhlYWx0aGNhcmUuY29tMSYwJAYD\nVQQDEx10bHNjYS5waGFybWFjeS5oZWFsdGhjYXJlLmNvbTAeFw0yMzA0MjEwNjMw\nMDBaFw0zMzA0MTgwNjMwMDBaMIGEMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs\naWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzEgMB4GA1UEChMXcGhhcm1h\nY3kuaGVhbHRoY2FyZS5jb20xJjAkBgNVBAMTHXRsc2NhLnBoYXJtYWN5LmhlYWx0\naGNhcmUuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEV6ca0uxgQv4SumnT\nKszFBke0fgmtyHE0udTTmgV7ngAgVICS0jwWJ64WZxSY3h9KeAjWgoXGjJcJJ6gr\nIHcMY6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCAV0W8HM//a9R+25D/g\nHqI52Oxy6bBG9wh28HjEol4uijAKBggqhkjOPQQDAgNIADBFAiEA2/MOtXtfOFBN\nDnyZQ7SM1FQY2/u82oH+0B+rAELlxOcCIH5BER+Bq3yOqv3uvn8VvIQcncOBHU/k\nYX3Gkz0+99eD\n-----END CERTIFICATE-----\n"
+          }
+        },
+        "peer0.lab.healthcare.com": {
+          "url": "grpc://localhost:7101",
+          "tlsCACerts": {
+            "pem": "-----BEGIN CERTIFICATE-----\nMIICXzCCAgWgAwIBAgIQLn+0SC5wCm74bxqdXL/HYzAKBggqhkjOPQQDAjB6MQsw\nCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy\nYW5jaXNjbzEbMBkGA1UEChMSbGFiLmhlYWx0aGNhcmUuY29tMSEwHwYDVQQDExh0\nbHNjYS5sYWIuaGVhbHRoY2FyZS5jb20wHhcNMjMwNDIxMDYzMDAwWhcNMzMwNDE4\nMDYzMDAwWjB6MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQG\nA1UEBxMNU2FuIEZyYW5jaXNjbzEbMBkGA1UEChMSbGFiLmhlYWx0aGNhcmUuY29t\nMSEwHwYDVQQDExh0bHNjYS5sYWIuaGVhbHRoY2FyZS5jb20wWTATBgcqhkjOPQIB\nBggqhkjOPQMBBwNCAAQq5iGZSdELa2KUvxiDlWiRao78qbdDKviocIfTosftBL7p\nxU3TPVw1FDKgs9bQoYfGMla/OeowyTSIJslT2BrZo20wazAOBgNVHQ8BAf8EBAMC\nAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMB\nAf8wKQYDVR0OBCIEIB/RMNSvCMe3XvGkTlO6MBgeSy82eSyvP2Mz5B77xOoXMAoG\nCCqGSM49BAMCA0gAMEUCIQDeXtFqdVAcLuznNWBdcheichcVoYtKTDHsVV4NcTeg\n6AIgct/tiBzKy4XvtQCtu3DG2ECwQMb2n3+aZ4tOWNjGsBg=\n-----END CERTIFICATE-----\n"
+          }
+        },
+        "peer0.insurance.healthcare.com": {
+          "url": "grpc://localhost:7121",
+          "tlsCACerts" : {
+            "pem": "-----BEGIN CERTIFICATE-----\nMIICezCCAiCgAwIBAgIRAIv6SXF2Q25xBpCi7T8UikowCgYIKoZIzj0EAwIwgYYx\nCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4g\nRnJhbmNpc2NvMSEwHwYDVQQKExhpbnN1cmFuY2UuaGVhbHRoY2FyZS5jb20xJzAl\nBgNVBAMTHnRsc2NhLmluc3VyYW5jZS5oZWFsdGhjYXJlLmNvbTAeFw0yMzA0MjEw\nNjMwMDBaFw0zMzA0MTgwNjMwMDBaMIGGMQswCQYDVQQGEwJVUzETMBEGA1UECBMK\nQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzEhMB8GA1UEChMYaW5z\ndXJhbmNlLmhlYWx0aGNhcmUuY29tMScwJQYDVQQDEx50bHNjYS5pbnN1cmFuY2Uu\naGVhbHRoY2FyZS5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR6E95bZNg9\nhQpjNtgBGnJakVUisC3EvfTenc5wLMvzXvioxa4GM8/gGpDz1olZA7A/5UBNlYhm\npcryQByzMqxwo20wazAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUH\nAwIGCCsGAQUFBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEICzRsi7s0lAl\nMKgTZmCQKjM6vF5qcOBojChOB8lgbpfcMAoGCCqGSM49BAMCA0kAMEYCIQCeFXL+\no9SMSPGM0f/SbkYaHfdhYQqMievefUC+DZFbBgIhALOzfheqZszyf3P0RyFJ6ARc\nGgpwOXxcgBH5MWtQT/Ic\n-----END CERTIFICATE-----\n"
+          }
+        }
+      },
+    "certificateAuthorities": {
+        "ca.doctor.healthcare.com": {
+            "url": "http://localhost:7060",
+            "caName": "ca.doctor.healthcare.com",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICbDCCAhOgAwIBAgIQTHXSSZWjrGQWAkLXfYah2DAKBggqhkjOPQQDAjCBgDEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xHjAcBgNVBAoTFWRvY3Rvci5oZWFsdGhjYXJlLmNvbTEkMCIGA1UE\nAxMbdGxzY2EuZG9jdG9yLmhlYWx0aGNhcmUuY29tMB4XDTIzMDQyMTA2MzAwMFoX\nDTMzMDQxODA2MzAwMFowgYAxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9y\nbmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMR4wHAYDVQQKExVkb2N0b3IuaGVh\nbHRoY2FyZS5jb20xJDAiBgNVBAMTG3Rsc2NhLmRvY3Rvci5oZWFsdGhjYXJlLmNv\nbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABNuLhaTFJ8DZZRbDiK06haMiUvbg\noSQVVt72XBvcsVuyyFwT55vWLB0YlimRUF4rShCawfvKY4WDjSx0qMVDmR+jbTBr\nMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw\nDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgw4YPXgbacGXFUr1aa1MlKYvXDm4W\nuHJYTFbphZ7PtakwCgYIKoZIzj0EAwIDRwAwRAIgYMjtkpOAY9/ZMDFGV3X4UF+f\nBohYY7IQUlP2Qhe7ZlECIEzJD+gZY9Y3WmICkKeoL3nDWEOIHLmEaVdYUX1Qp9qo\n-----END CERTIFICATE-----\n"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "name": "fablo-test-network-${ORG}",
+    "description": "Connection profile for lab in Fablo network",
+    "version": "1.0.0",
+    "client": {
+        "organization": "${ORG}"
+    },
+    "organizations": {
+        "${ORG}": {
+            "mspid": "${ORG}MSP",
+            "peers": [
+                "peer0.patient.healthcare.com",
+                "peer0.doctor.healthcare.com",
+                "peer0.pharmacy.healthcare.com",
+                "peer0.lab.healthcare.com",
+                "peer0.insurance.healthcare.com"
+            ],
+            "certificateAuthorities": [
+                "ca.${ORG}.healthcare.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.patient.healthcare.com": {
+          "url": "grpc://localhost:7041",
+          "tlsCACerts": {
+            "pem": "${PEERPEM1}"
+          }
+        },
+        "peer0.doctor.healthcare.com": {
+          "url": "grpc://localhost:7061",
+          "tlsCACerts": {
+            "pem": "${PEERPEM2}"
+          }
+        },
+        "peer0.pharmacy.healthcare.com": {
+          "url": "grpc://localhost:7081",
+          "tlsCACerts": {
+            "pem": "${PEERPEM3}"
+          }
+        },
+        "peer0.lab.healthcare.com": {
+          "url": "grpc://localhost:7101",
+          "tlsCACerts": {
+            "pem": "${PEERPEM4}"
+          }
+        },
+        "peer0.insurance.healthcare.com": {
+          "url": "grpc://localhost:7121",
+          "tlsCACerts" : {
+            "pem": "${PEERPEM5}"
+          }
+        }
+      },
+    "certificateAuthorities": {
+        "ca.${ORG}.healthcare.com": {
+            "url": "http://localhost:${CAPORT}",
+            "caName": "ca.${ORG}.healthcare.com",
+            "tlsCACerts": {
+                "pem": "${CAPEM}"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
