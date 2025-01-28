@@ -203,7 +203,7 @@ Incase if any of the commands fail due to configurations or the network was not 
     Copy paste these lines in all the fabric-ca-server-config.yaml (total 6 such files)
     files in the network. File locations: 
 
-    /fablo-target/fablo-config/fabric-ca-server-config/*.healthcare.com/fabric-ca-server-config.yaml
+    /fablo-target/fabric-config/fabric-ca-server-config/*.healthcare.com/fabric-ca-server-config.yaml
     ```
     affiliations:
         patient:
